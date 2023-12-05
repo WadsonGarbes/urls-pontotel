@@ -1,0 +1,959 @@
+<html>
+    <head>
+      <style>
+        body,
+        ul,
+        li,
+        h1,
+        h2,
+        p {
+          padding: 0;
+          margin: 0;
+        }
+
+        .center{
+          text-align: center;
+        }
+
+        ul li {
+          list-style: none;
+          color: red;
+        }
+
+        ul {
+          margin-top: 50px;
+        }
+
+        body {
+          background: url(../img/pattern.svg) repeat top;
+          font-family: "Avenir", arial, helvetica, sans-serif;
+          display: flex;
+          min-height: 100vh;
+          flex-direction: column;
+        }
+
+        a {
+          color: blue;
+          text-decoration: none;
+          
+        }
+
+        h1 {
+          font-family: "Avenir", Arial, Helvetica, sans-serif;
+          text-align: center;
+          margin: 20px 0 0 0;
+          color: blue;
+          font-size: 3rem;
+        }
+
+        input {
+          background: #dce2ed;
+          padding: 20px;
+          width: 10px;
+          height: 50%;
+          box-shadow: 0 4px 8px rgba(30, 60, 90, 0.1);
+          border: none;
+          border-radius: 4px;
+          transition: all 0.3s;
+        }
+
+        input:focus,
+        input:hover {
+          outline: none;
+          box-shadow: 0 6px 12px rgba(30, 60, 90, 0.2);
+        }
+
+        label { 
+          margin-top: 50px;
+          display: none;
+        }
+
+        p {
+          margin-top: 50px;
+        }
+
+        form input{
+          margin-top: 30px;
+          width: 500px;
+          font-size: 30px;
+          margin-top: 10px;
+        }
+
+
+        main {
+          flex: 1;
+        }
+
+        img {
+          display: block;
+          max-width: 200px;
+          max-height: 200px;
+          border-radius: 5px;
+        }
+
+        p {
+          font-size: 1.2em;
+          line-height: 1.6;
+          letter-spacing: -0.005em;
+          color: #fff;
+        }
+        /* LOGIN */
+        .login {
+          max-width: 600px;
+          margin: 0 auto;
+          padding: 0 20px;
+        }
+
+        .h1-center {
+          text-align: center;
+          font-size: 2rem;
+          margin-top: 40px;
+          color: blue;
+        }
+
+        .form-grid {
+          display: grid;
+        }
+
+        .perdeu {
+          text-align: center;
+          margin: 10px auto 0 auto;
+        }
+
+        .sem-conta{
+          margin-bottom: 30px;
+        }
+        .perdeu a:hover {
+          color: blue;
+          text-decoration: underline;
+        }
+
+        .margin-0-auto{
+          margin: 0 auto;
+        }
+
+        .margin-top-high{
+          margin-top: 20px;
+        }
+
+        .navbar {
+          background: rgba(0, 0, 0, 0.7);
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 15px 20px;
+          box-shadow: 0 2px 4px rgba(30, 60, 90, 0.1);
+        }
+
+        .sidenav-img {
+          max-width: 100%;
+        }
+
+        .mini-logo{
+          max-width: 50px;
+          max-height: 50px;
+        }
+
+        .flex {
+          display: flex;
+        }
+
+        .block {
+          display: block;
+        }
+
+        .item {
+          margin: 5px;
+          text-align: center;
+          font-size: 1.5em;
+        }
+        .titulo h1 {
+          font-size: 3.75em;
+          line-height: 1;
+          font-weight: 700;
+        }
+
+        .titulo span {
+          font-size: 0.875em;
+          font-style: italic;
+        }
+
+        .btn {
+          text-align: center;
+          display: block;
+          padding: 10px 30px;
+          background: blue;
+          width: 100%;
+          max-width: 300px;
+          border-radius: 4px;
+          color: #fff;
+          font-size: 1rem;
+          box-shadow: 0 4px 8px rgba(30, 60, 90, 0.2);
+          transition: all 0.3s;
+          border: none;
+          cursor: pointer;
+        }
+
+        form button {
+          margin: 50px auto;
+        }
+
+        form button:hover {
+          background: green;
+          transform: scale(1.1);
+          z-index: 1;
+        }
+
+        .btn:hover{
+          background: green;
+          transform: scale(1.1);
+          z-index: 1;
+        }
+
+        .btn-logout:hover{
+          background: red;
+          transform: scale(1.1);
+          z-index: 1;
+        }
+
+        .social-auth {
+          margin: 0 auto;
+          text-align: center;
+        }
+
+        .facebook-social-auth{
+          background: #3b5998;
+          margin-left: 50px;
+          display: inline-block;
+          width: 230px;
+        }
+
+        .facebook-social-auth:hover {
+          background: green;
+          transform: scale(1.1);
+          z-index: 1;
+        }
+
+        .google-social-auth{
+          background: #de5246;
+          margin-left: 10px;
+          display: inline-block;
+          width: 230px;
+        }
+
+        .google-social-auth:hover {
+          background: green;
+          transform: scale(1.1);
+          z-index: 1;
+        }
+
+        /* GRID GERAL */
+        .estrutura {
+          display: grid;
+          grid-template-columns: minmax(150px, 1fr) 3fr 300px;
+          grid-template-areas: "sidenav content anuncios";
+        }
+        @media (max-width: 1200px) {
+          .estrutura {
+            grid-template-areas:
+              "sidenav content content"
+              "sidenav anuncios anuncios";
+          }
+        }
+
+        @media (max-width: 760px) {
+          .estrutura {
+            grid-template-columns: 100%;
+            grid-template-areas:
+              "sidenav"
+              "content"
+              "anuncios";
+          }
+        }
+
+        .sidenav {
+          grid-area: sidenav;
+          background: #fafbfc;
+          padding: 30px;
+        }
+        .sidenav li a {
+          display: block;
+          min-width: 60px;
+          max-width: 100px;
+          margin: 0 auto 30px auto;
+          background: white;
+          padding: 20px;
+          border-radius: 5px;
+          box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+        }
+
+        .sidenav li a:hover {
+          background: #dce2ed;
+          transition: 0.1s ease-out;
+          transform: scale(1.05);
+        }
+
+        @keyframes seta {
+          from {
+            right: 30px;
+          }
+          to {
+            right: 20px;
+          }
+        }
+
+        @media (max-width: 760px) {
+          .sidenav {
+            overflow-x: auto;
+            -webkit-overflow-scroll: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+          }
+
+          .sidenav::after {
+            content: "→";
+            position: relative;
+            top: 5px;
+            height: 30px;
+            color: rgba(0, 0, 0, 0.3);
+            animation: seta 0.5s ease-in 0s infinite alternate;
+          }
+          .sidenav ul {
+            display: flex;
+          }
+          .sidenav ul li {
+            flex: 1 0 60px;
+          }
+          .sidenav {
+            padding: 0 30px;
+          }
+          .sidenav li a {
+            margin: 30px 30px 30px 0;
+          }
+
+          .sidenav-img {
+            max-width: 200px;
+            max-height: 200px;
+          }
+        }
+
+        .content {
+          grid-area: content;
+          max-width: 900px;
+          margin: 0 auto;
+          padding: 30px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 30px;
+        }
+
+        @media (max-width: 600px) {
+          .content {
+            grid-template-columns: auto;
+          }
+          .btn {
+            max-width: 150px;
+          }
+        }
+
+        .col-wide {
+          grid-column: 1 / -1;
+        }
+
+        .anuncios {
+          grid-area: anuncios;
+          background: #fafbfc;
+          display: grid;
+          align-content: start;
+          padding: 30px;
+          grid-gap: 30px;
+        }
+
+        .anuncio-item {
+          margin: 0 auto;
+        }
+        .caracteristicas span {
+          display: block;
+        }
+
+        .caracteristicas {
+          display: flex;
+          align-items: flex-start;
+          margin: 0 auto;
+        }
+
+        .messages{
+          text-align: center;
+        }
+
+        .caracteristicas > div {
+          width: 80px;
+          text-align: center;
+          background: linear-gradient(135deg, blue, green);
+          border-radius: 5px;
+          box-shadow: 0 2px 4px rgba(30, 60, 90, 0.1);
+          position: relative;
+          margin-bottom: 20px;
+        }
+
+        .caracteristicas > div:first-child {
+          margin-right: 3px;
+        }
+
+        .caracteristicas > div:last-child {
+          margin-left: 3px;
+        }
+
+        .caracteristicas div:hover{
+          transform: scale(1.1);
+        }
+
+        .numero {
+          color: white;
+          font-size: 3em;
+          line-height: 1;
+          margin: 10px auto;
+        }
+
+        .rotulo {
+          background: black;
+          border-radius: 0 0 5px 5px;
+          color: white;
+          padding: 5px 0;
+          position: relative;
+          top: 2px;
+        }
+
+        .citacao {
+          color: blue;
+          text-align: center;
+          margin: 0 auto;
+          padding: 30px;
+          border-radius: 5px;
+          box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
+          background: linear-gradient(135deg, blue, green);
+        }
+
+        .regras {
+          padding: 10px;
+          border-radius: 5px;
+          box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
+          background: #fafbfc;
+        }
+
+        .regras li {
+          color: black;
+          font-size: 1.125em;
+          font-family: "Avenir", arial, helvetica, sans-serif;
+          border-bottom: 2px solid white;
+          padding: 20px;
+          list-style: none;
+        }
+
+        .regras li + li {
+          border-bottom: 2px solid white;
+          padding: 20px;
+        }
+
+        .pontuacao{
+          text-align: center; 
+          color: black
+        }
+
+
+        .fade-in {
+          animation: fadeIn ease 3s;
+          -webkit-animation: fadeIn ease 3s;
+          -moz-animation: fadeIn ease 3s;
+          -o-animation: fadeIn ease 3s;
+          -ms-animation: fadeIn ease 3s;
+        }
+        @keyframes fadeIn {
+          0% {
+            opacity:0;
+          }
+          100% {
+            opacity:1;
+          }
+        }
+
+        @-moz-keyframes fadeIn {
+          0% {
+            opacity:0;
+          }
+          100% {
+            opacity:1;
+          }
+        }
+
+        @-webkit-keyframes fadeIn {
+          0% {
+            opacity:0;
+          }
+          100% {
+            opacity:1;
+          }
+        }
+
+        @-o-keyframes fadeIn {
+          0% {
+            opacity:0;
+          }
+          100% {
+            opacity:1;
+          }
+        }
+
+        @-ms-keyframes fadeIn {
+          0% {
+            opacity:0;
+          }
+          100% {
+            opacity:1;
+          }
+        }
+
+        /* BETS */
+        .bet-input {
+          background: #dce2ed;
+          padding: 20px;
+          width: 100px;
+          height: 50%;
+          box-shadow: 0 4px 8px rgba(30, 60, 90, 0.1);
+          border: none;
+          border-radius: 4px;
+          transition: all 0.3s;
+          font-size: 1.1rem;
+        }
+
+        input:focus,
+        input:hover {
+          outline: none;
+          box-shadow: 0 6px 12px rgba(30, 60, 90, 0.2);
+        }
+
+        nav {
+          background: #000;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 15px 20px;
+          box-shadow: 0 2px 4px rgba(30, 60, 90, 0.1);
+        }
+
+        main {
+          flex: 1;
+        }
+
+        .logo {
+          max-width: 100px;
+        }
+        .flex {
+          display: flex;
+        }
+
+        .block {
+          display: block;
+        }
+        .bets-table {
+          padding: 20px;
+          border-collapse: collapse;
+          margin: 0 auto;
+          font-size: 1.5em;
+          min-width: 400px;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+          border-collapse: separate;
+          border-spacing: 50px 0;
+        }
+
+        .bets-table thead tr {
+          padding: 20px;
+          color: #000;
+          text-align: center;
+        }
+
+        .bets-table td {
+          text-align: center;
+          color: blue;
+        }
+
+        .item {
+          margin: 5px;
+          text-align: center;
+          font-size: 1.5em;
+        }
+
+        .btn {
+          display: block;
+          padding: 10px 30px;
+          background: blue;
+          width: 50%;
+          max-width: 300px;
+          border-radius: 4px;
+          color: #fff;
+          font-size: 1rem;
+          box-shadow: 0 4px 8px rgba(30, 60, 90, 0.2);
+          transition: all 0.3s;
+          border: none;
+          cursor: pointer;
+        }
+
+        .btn-apostar {
+          margin-top: 0px;
+          margin-bottom: 10px;
+          display: block;
+          padding: 10px 30px;
+          background: blue;
+          width: 100%;
+          max-width: 300px;
+          border-radius: 4px;
+          color: #fff;
+          font-size: 1rem;
+          box-shadow: 0 4px 8px rgba(30, 60, 90, 0.2);
+          transition: all 0.3s;
+          border: none;
+          cursor: pointer;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .fire {
+          background: rgb(188, 20, 20);
+        }
+
+        .homologs {
+          background:#3b5998;
+        }
+
+        .hastati {
+          background:rgba(55, 47, 2, 0.567);
+        }
+
+        .actuarius {
+          background-color: #118032;
+        }
+
+        .vigiles {
+          background-color: #de5246;
+        }
+
+        .triarii {
+          background: #4692de;
+        }
+
+        .btn:hover,
+        .btn-apostar:hover {
+          background: green;
+          transform: scale(1.1);
+          z-index: 1;
+        }
+
+        .ten{
+          color: #118032;
+        }
+
+        .seven {
+          color: #668011;
+        }
+
+        .five {
+          color: #877b0c;
+        }
+
+        .three {
+          color: #de9502;
+        }
+
+        .zero {
+          color: #de0202;
+        }
+
+        tbody{
+          color: white;
+        }
+        .escudo {
+          width: 60px;
+          height: 60px;
+        }
+
+        @media only screen and (max-width: 760px),
+          (min-device-width: 768px) and (max-device-width: 1024px) {
+
+          .btn {
+            max-width: 150px;
+          }
+
+          thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+          }
+
+          tr {
+            text-align: center;
+            vertical-align: middle;
+          }
+
+          td {
+            position: relative;
+            padding-left: -50%;
+            text-align: center;
+            vertical-align: middle;
+            }
+
+          td:before {
+            position: relative;
+            top: 6px;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+            text-align: center;
+          }
+          .escudo{
+            width: 30px;
+            height: 30px;
+          }
+
+          .bet-input {
+            background: #dce2ed;
+            padding: 10px;
+            width: 40px;
+            height: 20%;
+            box-shadow: 0 4px 8px rgba(30, 60, 90, 0.1);
+            border: none;
+            border-radius: 4px;
+            transition: all 0.3s;
+            font-size: 1.1rem;
+          }
+          .bets-table {
+            padding: 20px;
+            border-collapse: collapse;
+            margin: 0 auto;
+            font-size: 1.5em;
+            min-width: 200px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            border-collapse: separate;
+            border-spacing: 25px 0;
+          }
+          h1 {
+            font-size: 1em;
+
+          }
+
+          h2 {
+            font-size: 0.75em;
+
+          }
+
+          form input{
+            margin-top: 30px;
+            width: 250px;
+            font-size: 15px;
+            margin-top: 10px;
+          }
+          
+        }
+
+        .card {
+          background: rgba(0, 0, 0, 0.2);
+          padding: 10px 10px;
+        }
+        .cards {
+          max-width: 1200px;
+          margin: 0 auto;
+          display: grid;
+          gap: 5rem;
+        }
+
+        .card-minify{
+          max-width: 120px;
+        }
+
+        .card:hover {
+          background: goldenrod;
+          transform: scale(1.1);
+          z-index: 1;
+        }
+
+        @media (min-width: 600px) {
+          .cards { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (min-width: 900px) {
+          .cards { grid-template-columns: repeat(3, 1fr); }
+        }
+
+
+
+        .fade-in {
+          animation: fadeIn ease 1.5s;
+          -webkit-animation: fadeIn ease 1.5s;
+          -moz-animation: fadeIn ease 1.5s;
+          -o-animation: fadeIn ease 1.5s;
+          -ms-animation: fadeIn ease 1.5s;
+        }
+
+        @keyframes fadeIn {
+          0% {
+            opacity:0;
+          }
+          100% {
+            opacity:1;
+          }
+        }
+
+        @-moz-keyframes fadeIn {
+          0% {
+            opacity:0;
+          }
+          100% {
+            opacity:1;
+          }
+        }
+
+        @-webkit-keyframes fadeIn {
+          0% {
+            opacity:0;
+          }
+          100% {
+            opacity:1;
+          }
+        }
+
+        @-o-keyframes fadeIn {
+          0% {
+            opacity:0;
+          }
+          100% {
+            opacity:1;
+          }
+        }
+
+        @-ms-keyframes fadeIn {
+          0% {
+            opacity:0;
+          }
+          100% {
+            opacity:1;
+        }
+        }
+</style>
+<meta charset="utf-8">
+    <body>
+      <section class="bets">
+        <h1>Escolha sua URL</h1>
+        <table class="bets-table">
+          <tbody>
+            <td>🔥 Top 3 pontotelers 🔥</td>
+            <tr>
+              <td><a class="btn-apostar fire" href="https://gestao.pontotel.com.br">Gestão Web PROD</a></td>
+            </tr>
+            <tr>
+              <td><a class="btn-apostar fire" href="https://bateponto.pontotel.com.br">Bateponto Web PROD</a></td>
+            </tr>
+            <tr>
+              <td><a class="btn-apostar fire" href="https://intranet.pontotel.com.br/">Intranet PROD</a></td>
+            </tr>
+            <td> 🤓 HOMOLOGS 🤓</td>
+            <tr>
+              <td><a class="btn-apostar homologs" href="https://hml.pontotel.com.br/pontotel/new-front">Gestão HML</a></td>
+            </tr>
+            <tr>
+              <td><a class="btn-apostar homologs" href="https://hml.pontotel.com.br/pontotel/bateponto">Bateponto HML</a></td>
+            </tr>
+            <tr>
+              <td><a class="btn-apostar homologs" href="https://hml.pontotel.com.br/pontotel/back">Intranet HML</a></td>
+            </tr>
+            <td> 🤓 ALPHA HASTATI 🤓</td>
+            <tr>
+              <td><a class="btn-apostar hastati" href="https://hml.pontotel.com.br/alpha-hastati/new-front"> Gestão </a></td>
+            </tr>
+            <tr>
+              <td><a class="btn-apostar hastati" href="https://hml.pontotel.com.br/alpha-hastati/bateponto"> Bateponto </a></td>
+            </tr>
+            <tr>
+              <td><a class="btn-apostar hastati" href="https://hml.pontotel.com.br/alpha-hastati/api/v4/docs"> API V4 Swagger</a></td>
+            </tr>
+            <tr>
+              <td><a class="btn-apostar hastati" href="https://hml.pontotel.com.br/alpha-hastati/api/v4/redoc"> API V4 REDOC</a></td>
+            </tr>
+            <tr>
+              <td><a class="btn-apostar hastati" href="https://hml.pontotel.com.br/alpha-hastati/api/v3/docs"> API V3 Swagger</a></td>
+            </tr>
+            <tr>
+              <td><a class="btn-apostar hastati" href="https://hml.pontotel.com.br/alpha-hastati/api/v3/redoc"> API V3 REDOC</a></td>
+            </tr>
+            <tr>
+              <td><a class="btn-apostar hastati" href="https://hml.pontotel.com.br/alpha-hastati/back"> Intranet </a></td>
+            </tr>
+            <td> 🤓 ALPHA ACTUARIUS 🤓</td>
+            <tr>
+              <td><a class="btn-apostar actuarius" href="https://hml.pontotel.com.br/alpha-actuarius/new-front"> Gestão </a></td>
+            </tr>
+            <tr>
+              <td><a class="btn-apostar actuarius" href="https://hml.pontotel.com.br/alpha-actuarius/bateponto"> Bateponto </a></td>
+            </tr>
+            <tr>
+              <td><a class="btn-apostar actuarius" href="https://hml.pontotel.com.br/alpha-actuarius/api/v4/docs"> API V4 Swagger</a></td>
+            </tr>
+            <tr>
+              <td><a class="btn-apostar actuarius" href="https://hml.pontotel.com.br/alpha-actuarius/api/v4/redoc"> API V4 REDOC</a></td>
+            </tr>
+            <tr>
+              <td><a class="btn-apostar actuarius" href="https://hml.pontotel.com.br/alpha-actuarius/api/v3/docs"> API V3 Swagger</a></td>
+            </tr>
+            <tr>
+              <td><a class="btn-apostar actuarius" href="https://hml.pontotel.com.br/alpha-actuarius/api/v3/redoc"> API V3 REDOC</a></td>
+            </tr>
+            <tr>
+              <td><a class="btn-apostar actuarius" href="https://hml.pontotel.com.br/alpha-actuarius/back"> Intranet </a></td>
+            </tr>
+            <td> 🤓 ALPHA VIGILES 🤓</td>
+            <tr>
+              <td><a class="btn-apostar vigiles" href="https://hml.pontotel.com.br/alpha-vigiles/new-front"> Gestão </a></td>
+            </tr>
+            <tr>
+              <td><a class="btn-apostar vigiles" href="https://hml.pontotel.com.br/alpha-vigiles/bateponto"> Bateponto </a></td>
+            </tr>
+            <tr>
+              <td><a class="btn-apostar vigiles" href="https://hml.pontotel.com.br/alpha-vigiles/api/v4/docs"> API V4 Swagger</a></td>
+            </tr>
+            <tr>
+              <td><a class="btn-apostar vigiles" href="https://hml.pontotel.com.br/alpha-vigiles/api/v4/redoc"> API V4 REDOC</a></td>
+            </tr>
+            <tr>
+              <td><a class="btn-apostar vigiles" href="https://hml.pontotel.com.br/alpha-vigiles/api/v3/docs"> API V3 Swagger</a></td>
+            </tr>
+            <tr>
+              <td><a class="btn-apostar vigiles" href="https://hml.pontotel.com.br/alpha-vigiles/api/v3/redoc"> API V3 REDOC</a></td>
+            </tr>
+            <tr>
+              <td><a class="btn-apostar vigiles" href="https://hml.pontotel.com.br/alpha-vigiles/back"> Intranet </a></td>
+            </tr>
+            <td> 🤓 ALPHA TRIARII 🤓</td>
+            <tr>
+              <td><a class="btn-apostar triarii" href="https://hml.pontotel.com.br/alpha-triarii/new-front"> Gestão </a></td>
+            </tr>
+            <tr>
+              <td><a class="btn-apostar triarii" href="https://hml.pontotel.com.br/alpha-triarii/bateponto"> Bateponto </a></td>
+            </tr>
+            <tr>
+              <td><a class="btn-apostar triarii" href="https://hml.pontotel.com.br/alpha-triarii/api/v4/docs"> API V4 Swagger</a></td>
+            </tr>
+            <tr>
+              <td><a class="btn-apostar triarii" href="https://hml.pontotel.com.br/alpha-triarii/api/v4/redoc"> API V4 REDOC</a></td>
+            </tr>
+            <tr>
+              <td><a class="btn-apostar triarii" href="https://hml.pontotel.com.br/alpha-triarii/api/v3/docs"> API V3 Swagger</a></td>
+            </tr>
+            <tr>
+              <td><a class="btn-apostar triarii" href="https://hml.pontotel.com.br/alpha-triarii/api/v3/redoc"> API V3 REDOC</a></td>
+            </tr>
+            <tr>
+              <td><a class="btn-apostar triarii" href="https://hml.pontotel.com.br/alpha-triarii/back"> Intranet </a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </body>
+</html>

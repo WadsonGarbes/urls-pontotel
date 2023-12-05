@@ -1,0 +1,19 @@
+body {
+  width: 200px;
+  min-height: 200px;
+  padding: 10px;
+}
+
+button {
+  width: 100%;
+  display: block;
+  margin-bottom: 5px;
+  font-family: 'Hanken Grotesk' serif;
+  font-weight: 700;
+  background-color: #79397d;
+  -webkit-box-shadow: 0 3px #401f44;
+  box-shadow: 0 3px #401f44;
+  color: #fff;
+  font-size: 10px;
+  min-height: 20px;
+}
