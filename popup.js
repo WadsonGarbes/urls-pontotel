@@ -4,9 +4,10 @@ document.addEventListener('DOMContentLoaded', function () {
     { label: 'Gestão PROD', url: 'https://gestao.pontotel.com.br' },
     { label: 'Bateponto PROD', url: 'https://bateponto.pontotel.com.br' },
     { label: 'Intranet PROD', url: 'https://intranet.pontotel.com.br' },
-    { label: 'Papo', url: 'https://papo.pontotel.com.br' },
+    { label: 'Aloque PROD', url: 'https://aloque.pontotel.com.br/' },
+    { label: 'Aloque HML', url: 'https://tinyurl.com/4c3339sy' },
     { label: 'Gestão HML', url: 'https://hml.pontotel.com.br/pontotel/new-front/index.html#/cognito/login' },
-    { label: 'Intranet HML', url: 'https://hml.pontotel.com.br/pontotel/back' }
+    { label: 'Intranet HML', url: 'https://hml.pontotel.com.br/pontotel/back' },
   ];
 
   const urlsList = document.getElementById('urlsList');
