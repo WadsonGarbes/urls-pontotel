@@ -1,19 +1,43 @@
 body {
-  width: 200px;
-  min-height: 200px;
-  padding: 10px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
 }
-
-button {
-  width: 100%;
-  display: block;
-  margin-bottom: 5px;
-  font-family: 'Hanken Grotesk' serif;
-  font-weight: 700;
-  background-color: #79397d;
-  -webkit-box-shadow: 0 3px #401f44;
-  box-shadow: 0 3px #401f44;
-  color: #fff;
-  font-size: 10px;
-  min-height: 20px;
+h1 {
+    text-align: center;
+    color: #333;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+.table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    text-transform: uppercase;
+}
+.table a {
+    display: inline-block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.centered {
+  text-align: center;
+}
+.fire { background-color: #ff5722; }
+.homologs { background-color: #2196F3; }
+.canary { background-color: #4CAF50; }
+.aloque { background-color: #FFC107; }
+.hastati { background-color: #9C27B0; }
+.actuarius { background-color: #3F51B5; }
+.vigiles { background-color: #FF9800; }
+.triarii { background-color: #00BCD4; }
+.table a:hover {
+    opacity: 0.8;
 }
