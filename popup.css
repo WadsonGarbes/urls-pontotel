@@ -38,14 +38,143 @@ h1 {
 .centered {
   text-align: center;
 }
-.fire { background-color: #ff5722; }
-.homologs { background-color: #2196F3; }
-.canary { background-color: #4CAF50; }
-.aloque { background-color: #FFC107; }
-.hastati { background-color: #9C27B0; }
-.actuarius { background-color: #3F51B5; }
-.vigiles { background-color: #FF9800; }
-.triarii { background-color: #00BCD4; }
+.cetacean-blue { background-color: #03045e; }
+.midnight-blue { background-color: #023e8a; }
+.star-command-blue { background-color: #0077b6; }
+.rich-electric-blue { background-color: #0096c7; }
+.cyan { background-color: #00b4d8; }
+.sea-serpent { background-color: #48cae4; }
+.medium-sky-blue { background-color: #90e0ef; }
+.blizzard-blue { background-color: #ade8f4; }
+.water { background-color: #caf0f8; }
+
 .table a:hover {
     opacity: 0.8;
+}
+
+/* Adicione estas regras ao seu popup.css existente */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    flex-grow: 1;
+}
+
+.settings-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    margin-left: 10px;
+}
+
+.settings-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.settings-btn:active {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Adicione estas regras ao seu popup.css existente */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    flex-grow: 1;
+}
+
+.settings-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    margin-left: 10px;
+}
+
+.settings-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.settings-btn:active {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+/* Adicione estas regras ao seu popup.css existente */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    flex-grow: 1;
+}
+
+.settings-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    margin-left: 10px;
+}
+
+.settings-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.settings-btn:active {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Gradação de cores azuis para os ambientes */
+.cetacean-blue { background-color: #03045e; }
+.midnight-blue { background-color: #023e8a; }
+.star-command-blue { background-color: #0077b6; }
+.rich-electric-blue { background-color: #0096c7; }
+.cyan { background-color: #00b4d8; }
+.sea-serpent { background-color: #48cae4; }
+.medium-sky-blue { background-color: #90e0ef; }
+.blizzard-blue { background-color: #ade8f4; }
+.water { background-color: #caf0f8; }
+
+/* Títulos das categorias sempre em laranja, independente da cor de fundo */
+.cetacean-blue strong,
+.midnight-blue strong,
+.star-command-blue strong,
+.rich-electric-blue strong,
+.cyan strong,
+.sea-serpent strong,
+.medium-sky-blue strong,
+.blizzard-blue strong,
+.water strong {
+    color: #FF9800 !important; /* Laranja para todos os títulos */
+}, 0, 0, 0.1);
+}
+
+.settings-btn:active {
+    background-color: rgba(0, 0, 0, 0.2);
 }
