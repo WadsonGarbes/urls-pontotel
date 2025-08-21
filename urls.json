@@ -1,0 +1,252 @@
+{
+  "environments": [
+    {
+      "name": "Produção",
+      "class": "fire",
+      "urls": [
+        {
+          "name": "Gestão Web",
+          "url": "https://gestao.pontotel.com.br"
+        },
+        {
+          "name": "Bateponto Web",
+          "url": "https://bateponto.pontotel.com.br"
+        },
+        {
+          "name": "Intranet",
+          "url": "https://intranet.pontotel.com.br/"
+        },
+        {
+          "name": "API V4 Swagger",
+          "url": "https://api.pontotel.com.br/v4/docs"
+        },
+        {
+          "name": "API V4 Redoc",
+          "url": "https://api.pontotel.com.br/v4/redoc"
+        },
+        {
+          "name": "API V3 Swagger",
+          "url": "https://api.pontotel.com.br/v3/docs"
+        },
+        {
+          "name": "API V3 Redoc",
+          "url": "https://api.pontotel.com.br/v3/redoc"
+        },
+        {
+          "name": "API V2 Swagger",
+          "url": "https://api.pontotel.com.br/docs"
+        }
+      ]
+    },
+    {
+      "name": "Homolog",
+      "class": "homologs",
+      "urls": [
+        {
+          "name": "Gestão HML",
+          "url": "https://hml.pontotel.com.br/pontotel/new-front"
+        },
+        {
+          "name": "Bateponto HML",
+          "url": "https://hml.pontotel.com.br/pontotel/bateponto"
+        },
+        {
+          "name": "Intranet HML",
+          "url": "https://hml.pontotel.com.br/pontotel/back"
+        }
+      ]
+    },
+    {
+      "name": "Canário",
+      "class": "canary",
+      "urls": [
+        {
+          "name": "Back Canário",
+          "url": "https://prod.pontotel.com.br/canary/back"
+        }
+      ]
+    },
+    {
+      "name": "Aloque",
+      "class": "aloque",
+      "urls": [
+        {
+          "name": "Alpha",
+          "url": "https://tinyurl.com/29uv5kz2"
+        },
+        {
+          "name": "Alpha-magenta",
+          "url": "https://hml.pontotel.com.br/aloque-alpha-magenta/frontend/index.html#/auth"
+        },
+        {
+          "name": "Api alpha",
+          "url": "https://tinyurl.com/x7uktbwk"
+        },
+        {
+          "name": "Api V1 Alpha",
+          "url": "https://hml.pontotel.com.br/aloque-alpha/backend/api/v1/docs#"
+        },
+        {
+          "name": "Homolog",
+          "url": "https://tinyurl.com/4c3339sy"
+        },
+        {
+          "name": "Api Homolog",
+          "url": "https://tinyurl.com/439fa52v"
+        },
+        {
+          "name": "Api v1 Homolog",
+          "url": "https://hml.pontotel.com.br/aloque/backend/api/v1/docs#"
+        },
+        {
+          "name": "Prod",
+          "url": "https://aloque.pontotel.com.br/"
+        },
+        {
+          "name": "Api Prod",
+          "url": "https://tinyurl.com/2s3n9exs"
+        },
+        {
+          "name": "Api v1 Prod",
+          "url": "https://prod.pontotel.com.br/aloque/backend/api/v1/docs#/"
+        }
+      ]
+    },
+    {
+      "name": "ALPHA HASTATI",
+      "class": "hastati",
+      "urls": [
+        {
+          "name": "Gestão",
+          "url": "https://hml.pontotel.com.br/alpha-hastati/new-front"
+        },
+        {
+          "name": "Bateponto",
+          "url": "https://hml.pontotel.com.br/alpha-hastati/bateponto"
+        },
+        {
+          "name": "API V4 Swagger",
+          "url": "https://hml.pontotel.com.br/alpha-hastati/api/v4/docs"
+        },
+        {
+          "name": "API V4 Redoc",
+          "url": "https://hml.pontotel.com.br/alpha-hastati/api/v4/redoc"
+        },
+        {
+          "name": "API V3 Swagger",
+          "url": "https://hml.pontotel.com.br/alpha-hastati/api/v3/docs"
+        },
+        {
+          "name": "API V3 Redoc",
+          "url": "https://hml.pontotel.com.br/alpha-hastati/api/v3/redoc"
+        },
+        {
+          "name": "Intranet",
+          "url": "https://hml.pontotel.com.br/alpha-hastati/back"
+        }
+      ]
+    },
+    {
+      "name": "ALPHA ACTUARIUS",
+      "class": "actuarius",
+      "urls": [
+        {
+          "name": "Gestão",
+          "url": "https://hml.pontotel.com.br/alpha-actuarius/new-front"
+        },
+        {
+          "name": "Bateponto",
+          "url": "https://hml.pontotel.com.br/alpha-actuarius/bateponto"
+        },
+        {
+          "name": "API V4 Swagger",
+          "url": "https://hml.pontotel.com.br/alpha-actuarius/api/v4/docs"
+        },
+        {
+          "name": "API V4 Redoc",
+          "url": "https://hml.pontotel.com.br/alpha-actuarius/api/v4/redoc"
+        },
+        {
+          "name": "API V3 Swagger",
+          "url": "https://hml.pontotel.com.br/alpha-actuarius/api/v3/docs"
+        },
+        {
+          "name": "API V3 Redoc",
+          "url": "https://hml.pontotel.com.br/alpha-actuarius/api/v3/redoc"
+        },
+        {
+          "name": "Intranet",
+          "url": "https://hml.pontotel.com.br/alpha-actuarius/back"
+        }
+      ]
+    },
+    {
+      "name": "ALPHA VIGILES",
+      "class": "vigiles",
+      "urls": [
+        {
+          "name": "Gestão",
+          "url": "https://hml.pontotel.com.br/alpha-vigiles/new-front"
+        },
+        {
+          "name": "Bateponto",
+          "url": "https://hml.pontotel.com.br/alpha-vigiles/bateponto"
+        },
+        {
+          "name": "API V4 Swagger",
+          "url": "https://hml.pontotel.com.br/alpha-vigiles/api/v4/docs"
+        },
+        {
+          "name": "API V4 Redoc",
+          "url": "https://hml.pontotel.com.br/alpha-vigiles/api/v4/redoc"
+        },
+        {
+          "name": "API V3 Swagger",
+          "url": "https://hml.pontotel.com.br/alpha-vigiles/api/v3/docs"
+        },
+        {
+          "name": "API V3 Redoc",
+          "url": "https://hml.pontotel.com.br/alpha-vigiles/api/v3/redoc"
+        },
+        {
+          "name": "Intranet",
+          "url": "https://hml.pontotel.com.br/alpha-vigiles/back"
+        }
+      ]
+    },
+    {
+      "name": "ALPHA TRIARII",
+      "class": "triarii",
+      "urls": [
+        {
+          "name": "Gestão",
+          "url": "https://hml.pontotel.com.br/alpha-triarii/new-front"
+        },
+        {
+          "name": "Bateponto",
+          "url": "https://hml.pontotel.com.br/alpha-triarii/bateponto"
+        },
+        {
+          "name": "API V4 Swagger",
+          "url": "https://hml.pontotel.com.br/alpha-triarii/api/v4/docs"
+        },
+        {
+          "name": "API V4 Redoc",
+          "url": "https://hml.pontotel.com.br/alpha-triarii/api/v4/redoc"
+        },
+        {
+          "name": "API V3 Swagger",
+          "url": "https://hml.pontotel.com.br/alpha-triarii/api/v3/docs"
+        },
+        {
+          "name": "API V3 Redoc",
+          "url": "https://hml.pontotel.com.br/alpha-triarii/api/v3/redoc"
+        },
+        {
+          "name": "Intranet",
+          "url": "https://hml.pontotel.com.br/alpha-triarii/back"
+        }
+      ]
+    }
+  ]
+}
