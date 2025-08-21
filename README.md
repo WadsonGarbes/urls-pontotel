@@ -1,0 +1,1 @@
+Clone o repositório ou baixe a pasta contendo os arquivos > Três pontinhos no chrome ao lado do seu perfil > Extensões > Gerenciar extensões > Habilitar modo desenvolvedor > Carregar sem compactação > Escolher a pasta completa (urls-pontotel) > Pinnar extensão no chrome como favorita > carregar seu json conforme o template e pronto!
